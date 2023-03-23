@@ -8,6 +8,12 @@ const morgan = require('morgan');  //required for logging
 const cors = require('cors');  //required for cors
 
 //****************************************
+//   routers
+//****************************************
+
+const GeneralRouter = require("../routers/general")
+
+//****************************************
 //   middleware
 //****************************************
 
