@@ -11,16 +11,16 @@ const mongoose = require("./connection");
 const {Schema, model } = mongoose;
 
 //****************************************
-//   Goal Schema
+//   User Schema
 //****************************************
 
-const goalSchema = new Schema ({
-    u_userid: {type: String, required: true},
-    u_password: {type: String,required: true},
-    u_firstName: {type: String, required: true},
-    u_lastName: {type: String, required: true},
-    u_email: {type: String,required: true},
-    u_cellPhoneNumber: {type: String, required: true} 
+const userSchema = new Schema ({
+    u_Userid: {type: String, required: true},
+    u_Password: {type: String,required: true},
+    u_FirstName: {type: String, required: true},
+    u_LastName: {type: String, required: true},
+    u_Email: {type: String,required: true},
+    u_CellPhoneNumber: {type: String, required: true} 
 });
 
 //****************************************
