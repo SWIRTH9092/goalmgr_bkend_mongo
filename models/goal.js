@@ -15,15 +15,15 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const goalSchema = new Schema ({
-    g_parent_Id: {type: String, required: true},
-    g_name: {type: String, required: true},
-    g_status: {type: String, required: true},
-    g_description: {type: String},
-    g_measurement: {type: String},
-    g_count: {type: Number, default: 0},
-    g_sortOrder: {type: Number, default: 99},
-    g_startDate: {type: Date},
-    g_endDate: {type, Date} 
+    g_Parent_Id: {type: String, required: true},
+    g_Name: {type: String, required: true},
+    g_Status: {type: String, required: true},
+    g_Description: {type: String},
+    g_Measurement: {type: String},
+    g_Count: {type: Number, default: 0},
+    g_SortOrder: {type: Number, default: 99},
+    g_StartDate: {type: Date},
+    g_EndDate: {type, Date} 
 });
 
 //****************************************
