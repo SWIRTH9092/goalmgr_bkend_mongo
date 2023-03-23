@@ -25,15 +25,6 @@ const middleware = require("./utils/middleware");
 middleware(app);
 
 //****************************************
-//   Routes
-//****************************************
-
-//create a test route
-app.get ("/", (req, res) => {
-    res.send("hello world");
-});
-
-//****************************************
 //   Listener
 //****************************************
 
