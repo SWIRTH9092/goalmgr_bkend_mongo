@@ -30,6 +30,7 @@ mongoose.connection.on('open', () => {
         })
         .catch (error => {
             console.log (`Mongodb create error: ${error}`)
+            mongoose.connection.close();
         })
 
 
