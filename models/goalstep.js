@@ -14,26 +14,26 @@ const {Schema, model } = mongoose;
 //   GoalStep Schema
 //****************************************
 
-const goalstepSchema = new Schema ({
-    gs_parent_Id: {type: String, required: true},
-    gs_name: {type: String, required: true},
-    gs_status: {type: String, required: true},
-    gs_description: {type: String},
-    gs_measurement: {type: String},
-    gs_count: {type: Number, default: 0},
-    gs_sortOrder: {type: Number, default: 99},
-    gs_startDate: {type: Date},
-    gs_endDate: {type, Date} 
+const goalStepSchema = new Schema ({
+    gs_Parent_Id: {type: String, required: true},
+    gs_Name: {type: String, required: true},
+    gs_Status: {type: String, required: true},
+    gs_Description: {type: String},
+    gs_Measurement: {type: String},
+    gs_Count: {type: Number, default: 0},
+    gs_SortOrder: {type: Number, default: 99},
+    gs_StartDate: {type: Date},
+    gs_EndDate: {type, Date} 
 });
 
 //****************************************
 //   make goal step Model
 //****************************************
 
-const Goalstep = model("Goalstep", goalstepSchema);
+const GoalStep = model("GoalStep", goalStepSchema);
 
 //****************************************
 //  Export goal step Model
 //****************************************
 
-module.exports = Goalstep
+module.exports = GoalStep
