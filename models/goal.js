@@ -2,7 +2,6 @@
 //   import dependencies
 //****************************************
 
-const { stringify } = require("querystring");
 const mongoose = require("./connection");
 
 //****************************************
@@ -12,10 +11,10 @@ const mongoose = require("./connection");
 const {Schema, model } = mongoose;
 
 //****************************************
-//   User Schema
+//  Goal Schema
 //****************************************
 
-const userSchema = new Schema ({
+const goalSchema = new Schema ({
     g_parent_Id: {type: String, required: true},
     g_name: {type: String, required: true},
     g_status: {type: String, required: true},
