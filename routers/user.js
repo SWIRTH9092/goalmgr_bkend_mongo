@@ -6,7 +6,7 @@ const express = require('express') // bring this in so we can make our router
 //-------------------------------------------
 // controller dependencies
 //-------------------------------------------
-const userIndex = require ("../controllers/user/userIndex")
+const userIndex = require ("../controllers/user/olduserIndex")
 const userPost = require("../controllers/user/userPost")
 const userUpdate = require("../controllers/user/userUpdate")
 const userDelete = require("../controllers/user/userDelete")
