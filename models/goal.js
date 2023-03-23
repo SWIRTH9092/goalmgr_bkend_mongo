@@ -5,7 +5,7 @@
 const mongoose = require("./connection");
 
 //****************************************
-//   Define User Model
+//   Define goal Model
 //****************************************
 
 const {Schema, model } = mongoose;
@@ -30,10 +30,10 @@ const goalSchema = new Schema ({
 //   make goal Model
 //****************************************
 
-const Goal = model("Goal", userSchema);
+const Goal = model("Goal", goalSchema);
 
 //****************************************
-//  Export User Model
+//  Export goal Model
 //****************************************
 
 module.exports = Goal
