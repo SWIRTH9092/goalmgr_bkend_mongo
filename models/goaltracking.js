@@ -5,7 +5,7 @@
 const mongoose = require("./connection");
 
 //****************************************
-//   Define Goal Step Model
+//   Define Goal Tracking Model
 //****************************************
 
 const {Schema, model } = mongoose;
@@ -14,21 +14,21 @@ const {Schema, model } = mongoose;
 //   GoalTracking Schema
 //****************************************
 
-const goaltrackingSchema = new Schema ({
-    gt_parent_Id: {type: String, required: true},
-    gt_date: {type: String},
-    gt_count: {type: Number},
-    gt_completedForDay: {type: Boolean}
+const goalTrackingSchema = new Schema ({
+    gt_Parent_Id: {type: String, required: true},
+    gt_Date: {type: String},
+    gt_Count: {type: Number},
+    gt_CompletedForDay: {type: Boolean}
 });
 
 //****************************************
 //   make goal Tracking Model
 //****************************************
 
-const Goaltracking = model("Goaltracking", goaltrackingSchema);
+const GoalTracking = model("GoalTracking", goalTrackingSchema);
 
 //****************************************
 //  Export goal tracking Model
 //****************************************
 
-module.exports = Goaltracking
+module.exports = GoalTracking
