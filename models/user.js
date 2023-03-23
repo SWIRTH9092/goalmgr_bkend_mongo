@@ -15,7 +15,7 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const userSchema = new Schema ({
-    u_Userid: {type: String, required: true},
+    u_Userid: {type: String, required: true, unique:true},
     u_Password: {type: String,required: true},
     u_FirstName: {type: String, required: true},
     u_LastName: {type: String, required: true},
