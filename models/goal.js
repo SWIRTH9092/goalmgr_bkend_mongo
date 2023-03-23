@@ -28,13 +28,13 @@ const userSchema = new Schema ({
 });
 
 //****************************************
-//   make user Model
+//   make goal Model
 //****************************************
 
-const User = model("User", userSchema);
+const Goal = model("Goal", userSchema);
 
 //****************************************
 //  Export User Model
 //****************************************
 
-module.exports = User
+module.exports = Goal
