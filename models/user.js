@@ -5,22 +5,22 @@
 const mongoose = require("./connection");
 
 //****************************************
-//   Define User Model
+//   Define Schema, Model
 //****************************************
 
 const {Schema, model } = mongoose;
 
 //****************************************
-//   User Schema
+//   Goal Schema
 //****************************************
 
-const userSchema = new Schema ({
+const goalSchema = new Schema ({
     userid: {type: String},
     password: {type: String},
-    FirstName: {type: String},
-    LastName: {type: String},
-    Email: {type: String},
-    CellPhoneNumber: {type: String} 
+    firstName: {type: String},
+    lastName: {type: String},
+    email: {type: String},
+    cellPhoneNumber: {type: String} 
 });
 
 //****************************************
