@@ -15,12 +15,12 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const goalSchema = new Schema ({
-    userid: {type: String},
-    password: {type: String},
-    firstName: {type: String},
-    lastName: {type: String},
-    email: {type: String},
-    cellPhoneNumber: {type: String} 
+    u_userid: {type: String, required: true},
+    u_password: {type: String,required: true},
+    u_firstName: {type: String, required: true},
+    u_lastName: {type: String, required: true},
+    u_email: {type: String,required: true},
+    u_cellPhoneNumber: {type: String, required: true} 
 });
 
 //****************************************
