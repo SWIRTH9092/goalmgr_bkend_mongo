@@ -19,7 +19,8 @@ const goalTrackingSchema = new Schema ({
     gt_Date: {type: String},
     gt_Count: {type: Number},
     gt_CompletedForDay: {type: Boolean}
-});
+}, 
+{timestamps: true});
 
 //****************************************
 //   make goal Tracking Model

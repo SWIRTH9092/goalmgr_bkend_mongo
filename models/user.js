@@ -21,7 +21,7 @@ const userSchema = new Schema ({
     u_LastName: {type: String, required: true},
     u_Email: {type: String,required: true},
     u_CellPhoneNumber: {type: String, required: true} 
-});
+}, {timestampes: true});
 
 //****************************************
 //   make user Model

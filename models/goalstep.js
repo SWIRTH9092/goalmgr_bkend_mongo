@@ -24,7 +24,8 @@ const goalStepSchema = new Schema ({
     gs_SortOrder: {type: Number, default: 99},
     gs_StartDate: {type: Date},
     gs_EndDate: {type, Date} 
-});
+}, 
+{timestamps: true});
 
 //****************************************
 //   make goal step Model
