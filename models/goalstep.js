@@ -15,7 +15,8 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const goalStepSchema = new Schema ({
-    gs_Parent_Id: {type: String, required: true},
+    gs_U_RootKey: {type: String, required: true},
+    gs_G_RootKey: {type: String, required: true},
     gs_Name: {type: String, required: true},
     gs_Status: {type: String, required: true},
     gs_Description: {type: String},

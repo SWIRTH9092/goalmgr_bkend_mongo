@@ -15,7 +15,9 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const goalTrackingSchema = new Schema ({
-    gt_Parent_Id: {type: String, required: true},
+    gt_U_RootKey: {type: String, required: true},
+    gt_G_RootKey: {type: String, required: true},
+    gt_Gs_RootKey: {type: String, required: true},
     gt_Date: {type: String},
     gt_Count: {type: Number},
     gt_CompletedForDay: {type: Boolean}
