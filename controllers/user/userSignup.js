@@ -2,11 +2,9 @@
 //  Import dependencies
 //----------------------------
 const express = require("express")
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+const bcrypt = require("bcryptjs")
 
-dotenv.config()
+
 
 // for MongoDB database
 const User = require("../../models/user")
@@ -14,12 +12,26 @@ const User = require("../../models/user")
 const userSignup = async (req, res) => {
     try {
         //  hash password
-        req.body.u_Password = await bcrypt.hash(req.body.U_Password, await bcrypt.genSalt(10))
+        req.body.u_Password = await bcrypt.hash(req.body.u_Password, await bcrypt.genSalt(10))
+        
+        // create root key - datetime plus has key for userid
+        
+        // get current date for root key
+        const currentDate = new Date();
+        const currentDateFormatted = "DT" + 
+            currentDate.getFullYear() +
+            (currentDate.getMonth()+1) +
+            currentDate.getDate() +
+            currentDate.getHours() +
+            currentDate.getMinutes() +
+            currentDate.getSeconds() + '-';
 
         // hash userid for root document finding
-        req.body.u_RootKey = await bcrypt.hash(req.body.U_Userid, await bcrypt.genSalt(10))
-
+        
+        const encryptHash = await bcrypt.hash(req.body.u_Userid, await bcrypt.genSalt(10))
+        req.body.u_RootKey = currentDateFormatted + encryptHash
         res.json (await User.create(req.body));
+        
     } catch (error) {
         //send error
         res.status(400).json(error)
