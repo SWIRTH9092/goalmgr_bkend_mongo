@@ -1,7 +1,7 @@
 const express = require("express")
 
-import Goal from "../models/goal.js"
-import isLoggedIn from "../utils/isLoggedIn.js"
+const Goal = "../../models/goal"
+const isLoggedIn = "../../utils/isLoggedIn.js"
 
   const goalIndex = async (req, res) => {
         try {
