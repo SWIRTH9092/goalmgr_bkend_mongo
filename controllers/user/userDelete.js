@@ -15,9 +15,9 @@ const userDelete = async (req, res) => {
         if (req.body.u_Userid === userid) {
             if (req.params.id === userid) {
                 res.json(await User.findByIdAndRemove(req.params.id))  
-                res.
-                    clearCookie("token").
-                    json({ response: "Your userid id has been deleted" });  
+                res
+                    .clearCookie("token")
+                    .json({ response: "Your userid id has been deleted" });  
             console.count("in delete") 
             } else {
                 res.status(400).json("error: Username mismatch");
