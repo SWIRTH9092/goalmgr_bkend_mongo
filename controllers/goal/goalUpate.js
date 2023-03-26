@@ -3,11 +3,12 @@ const express = require("express")
 const Goal = "../../models/goal"
 const isLoggedIn = "../../utils/isLoggedIn.js"
 
-  const goalShow = async (req, res) => {
+  const goalUpdate = async (req, res) => {
         try {
             if(isLoggedIn) {
                 const u_RootKey = req.payload.u_RootKey;
-                const goal = await Goal.find({ u_RootKey, _id:req.params.id  });
+                req.body.u_RootKey = u_RootKey;
+                const goal = await Note.findByIdAndUpdate(req.params.id, req.body)
                 res.json(goal);               
             } 
         }
@@ -18,7 +19,7 @@ const isLoggedIn = "../../utils/isLoggedIn.js"
     };
 
 //----------------------------
-//  Export goalShow
+//  Export goalUpdate
 //----------------------------
 
-module.exports = goalShow
+module.exports = goalUpdate
