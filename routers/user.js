@@ -8,7 +8,7 @@ const express = require('express') // bring this in so we can make our router
 //-------------------------------------------
 const userIndex = require ("../controllers/user/userIndex")
 const userSignup = require("../controllers/user/userSignup")
-const userUpdate = require("../controllers/user/userUpdate")
+const userLogin = require("../controllers/user/userLogin")
 const userDelete = require("../controllers/user/userDelete")
 const userShow = require("../controllers/user/userShow")
 
@@ -22,7 +22,7 @@ const router = express.Router()
 //-------------------------------------------
 router.get('/', userIndex);  // get all 
 router.post('/signup', userSignup);  // Create New 
-router.put('/:id', userUpdate); //Update Existing
+router.post('/login', userLogin); //Update Existing
 router.delete('/:id', userDelete)  // delete Existing
 router.get('/:id', userShow)  // Show a specific item
 
