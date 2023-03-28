@@ -23,7 +23,7 @@ const goalSchema = new Schema ({
     g_Count: {type: Number, default: 0},
     g_SortOrder: {type: Number, default: 99},
     g_StartDate: {type: Date},
-    g_EndDate: {type, Date} 
+    g_EndDate: {type: Date} 
     }, 
     {timestamps: true});
 

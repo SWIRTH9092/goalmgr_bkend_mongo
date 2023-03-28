@@ -5,6 +5,7 @@
 require('dotenv').config();
 const mongoose = require('./connection');
 const User = require('./user')
+const Goal = require('./goal')
 
 //****************************************
 //   seed user table to test connection
@@ -23,8 +24,26 @@ mongoose.connection.on('open', () => {
         }
     ]
 
-    // for first time if no data
-        User.create(startingUser)
+    const startingGoal = [
+        {
+            g_U_RootKey: "DT2023325183944-$2a$10$nEwYPyPJC1QNTq3qh.E11uaD.lHb7hzqdafs0hx60pLw35UH8ETlO", 
+            g_Name: "Shine Shoes",
+            g_Status: "Not Started",
+            g_description:  "Blah, blah ...."
+        }
+    ]
+
+    // // for first time if no data
+    //     User.create(startingUser)
+    //     .then (result => {
+    //         mongoose.connection.close();
+    //     })
+    //     .catch (error => {
+    //         console.log (`Mongodb create error: ${error}`)
+    //         mongoose.connection.close();
+    //     })
+    
+       Goal.create(startingGoal)
         .then (result => {
             mongoose.connection.close();
         })
@@ -32,7 +51,6 @@ mongoose.connection.on('open', () => {
             console.log (`Mongodb create error: ${error}`)
             mongoose.connection.close();
         })
-
 
     //  if not the first time, delete old data
         // User.deleteMany({} => {
