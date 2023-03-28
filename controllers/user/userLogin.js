@@ -24,7 +24,7 @@ const userLogin = async (req, res) => {
                 res
                     // .cookie("token", token, { httpOnly: true })
                     .cookie("token", token)
-                    .json({payload, status: "Logged In"})
+                    .json({payload, u_RootKey, status: "Logged In"})
             } else {
                 res.status(400).json({error: "Password does not match"})               
             }
