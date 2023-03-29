@@ -20,11 +20,11 @@ const router = express.Router()
 //-------------------------------------------
 // routersgoal
 //-------------------------------------------
-router.get('/', goalIndex);  // get all 
+router.get('/index', goalIndex);  // get all 
 router.post('/create', goalCreate);  // Create New 
-router.put('/:id', goalUpdate); //Update Existing
-router.delete('/:id', goalDelete)  // delete Existing
-router.get('/:id', goalShow)  // Show a specific item
+router.put('/update/:id', goalUpdate); //Update Existing
+router.delete('/delete/:id', goalDelete)  // delete Existing
+router.get('/upate/:id', goalShow)  // Show a specific item
 
 //-------------------------------------------
 // Export the Router
