@@ -45,23 +45,14 @@ mongoose.connection.on('open', () => {
     const startingGoal = [
         {
             g_URootKey: "DT2023329134258-$2a$10$C5f4mgAWiG7Rwx.fW3JGLOK.4AkP3rf6jLeXjJHEFZI7oo5Ld54Tm", 
-            g_Name: "Shine Shoes",
-            g_Status: "Not Started",
-            g_description:  "Blah, blah ...."
+            g_GoalName: "Shine Shoes",
+            g_GoalStatus: "Not Started",
+            g_Description:  "Blah, blah ...."
         }
     ]
 
-    // for first time if no data
-        Goal.create(startingGoal)
-        .then (result => {
-            mongoose.connection.close();
-        })
-        .catch (error => {
-            console.log (`Mongodb create error: ${error}`)
-            mongoose.connection.close();
-        })
-    
-    //    User.create(startingUser)
+    // // for first time if no data
+    //     Goal.create(startingGoal)
     //     .then (result => {
     //         mongoose.connection.close();
     //     })
@@ -69,6 +60,15 @@ mongoose.connection.on('open', () => {
     //         console.log (`Mongodb create error: ${error}`)
     //         mongoose.connection.close();
     //     })
+    
+       User.create(startingUser)
+        .then (result => {
+            mongoose.connection.close();
+        })
+        .catch (error => {
+            console.log (`Mongodb create error: ${error}`)
+            mongoose.connection.close();
+        })
 
 
         // })

@@ -14,7 +14,7 @@ const cors = require('cors');  //required for cors
 const GeneralRouter = require("../routers/general");
 const AuthRouter = require("../routers/user")
 const GoalRouter = require("../routers/goal")
-
+const GoalListRouter = require("../routers/goallist")
 //****************************************
 //   middleware
 //****************************************
@@ -31,7 +31,7 @@ const middleware =(app) => {
     app.use("/", GeneralRouter);
     app.use("/auth", AuthRouter);
     app.use("/goal", GoalRouter);
-
+    app.use("/goallist", GoalListRouter);
 }
 
 //****************************************

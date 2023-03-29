@@ -20,9 +20,9 @@ const userSchema = new Schema ({
     u_RootKey: {type: String, required: true, unique: true },
     u_FirstName: {type: String, required: true},
     u_LastName: {type: String, required: true},
-    u_Email: {type: String,required: true},
+    u_Email: {type: String,required: true, unique: true},
     u_CellPhoneNumber: {type: String, required: true}
-}, {timestampes: true});
+}, {timestamps: true});
 
 //****************************************
 //   make user Model

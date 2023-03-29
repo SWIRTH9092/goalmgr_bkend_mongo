@@ -15,13 +15,13 @@ const {Schema, model } = mongoose;
 //****************************************
 
 const goalSchema = new Schema ({
-    g_U_RootKey: {type: String, required: true},
-    g_Name: {type: String, required: true},
-    g_Status: {type: String, required: true},
-    g_Description: {type: String},
-    g_SortOrder: {type: Number, default: 99},
-    g_StartDate: {type: Date},
-    g_EndDate: {type: Date} 
+    g_URootKey: {type: String, required: true},
+    g_GoalName: {type: String, required: true},
+    g_GoalStatus: {type: String, required: true},
+    g_GoalDescription: {type: String},
+    g_GoalSortOrder: {type: Number, default: 99},
+    g_GoalStartDate: {type: String},
+    g_GoalEndDate: {type: String} 
     }, 
     {timestamps: true});
 

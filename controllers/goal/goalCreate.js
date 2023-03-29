@@ -1,13 +1,16 @@
 const express = require("express")
 
 const Goal = "../../models/goal"
-const isLoggedIn = "../../utils/isLoggedIn.js"
+// const isLoggedIn = "../../utils/isLoggedIn.js"
 
 
 const goalCreate = async (req, res) => {
     try {
         //  create Goal
+        console.count("in create module")
+        console.log("req", req.body)
         res.json (await Goal.create(req.body));
+        console.count("in create module")
     } catch (error) {
         //send error
         res.status(400).json(error)
