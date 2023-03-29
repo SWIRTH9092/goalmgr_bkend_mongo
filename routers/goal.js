@@ -21,7 +21,7 @@ const router = express.Router()
 // routersgoal
 //-------------------------------------------
 router.get('/', goalIndex);  // get all 
-router.post('/', goalCreate);  // Create New 
+router.post('/create', goalCreate);  // Create New 
 router.put('/:id', goalUpdate); //Update Existing
 router.delete('/:id', goalDelete)  // delete Existing
 router.get('/:id', goalShow)  // Show a specific item
