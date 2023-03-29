@@ -44,24 +44,15 @@ mongoose.connection.on('open', () => {
 
     const startingGoal = [
         {
-            g_U_RootKey: "DT2023325183944-$2a$10$nEwYPyPJC1QNTq3qh.E11uaD.lHb7hzqdafs0hx60pLw35UH8ETlO", 
+            g_URootKey: "DT2023329134258-$2a$10$C5f4mgAWiG7Rwx.fW3JGLOK.4AkP3rf6jLeXjJHEFZI7oo5Ld54Tm", 
             g_Name: "Shine Shoes",
             g_Status: "Not Started",
             g_description:  "Blah, blah ...."
         }
     ]
 
-    // // for first time if no data
-    //     User.create(startingUser)
-    //     .then (result => {
-    //         mongoose.connection.close();
-    //     })
-    //     .catch (error => {
-    //         console.log (`Mongodb create error: ${error}`)
-    //         mongoose.connection.close();
-    //     })
-    
-       User.create(startingUser)
+    // for first time if no data
+        Goal.create(startingGoal)
         .then (result => {
             mongoose.connection.close();
         })
@@ -69,7 +60,18 @@ mongoose.connection.on('open', () => {
             console.log (`Mongodb create error: ${error}`)
             mongoose.connection.close();
         })
+    
+    //    User.create(startingUser)
+    //     .then (result => {
+    //         mongoose.connection.close();
+    //     })
+    //     .catch (error => {
+    //         console.log (`Mongodb create error: ${error}`)
+    //         mongoose.connection.close();
+    //     })
 
+
+        // })
     //  if not the first time, delete old data
         // User.deleteMany({} => {
         //     //  create new user item

@@ -32,7 +32,7 @@ mongoose.connection
 
 .on("open", () => console.log("Connected to Mongoose"))
 .on("close", () => console.log("Disconnected from Mongoose"))
-.on("error", (error) => console.log(error));
+.on("error", (error) => console.log("mongoose error", error));
 
 //****************************************
 //   export connection
