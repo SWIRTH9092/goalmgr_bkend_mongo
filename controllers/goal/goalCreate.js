@@ -5,12 +5,15 @@ const isLoggedIn = "../../utils/isLoggedIn.js"
 
   const goalCreate = async (req, res) => {
         try {
-            if(isLoggedIn) {
-                const u_RootKey = req.payload.u_RootKey;
-                req.body.u_Rootkey = u_RootKey;
-                const goal = await Goal.create(req.body);
-                res.json(goal);    
-            }           
+            if(isLoggedIn()) {
+                const g_RootKey = req.payload.g_RootKey;
+                req.body.g_U_Rootkey = g_RootKey;
+                console.log(req.body)
+                res.json(await Goal.create(req.body));
+            }  else {
+                res.status(400).json("error: not Logged in")
+            }
+                     
         }
         catch(error) {
             res.status(400).json({error});
