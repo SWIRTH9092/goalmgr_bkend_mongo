@@ -19,8 +19,7 @@ const router = express.Router()
 // routers
 //-------------------------------------------
 router.post('/create', goalListCreate);  // create a goal
-router.get('/index', goalListIndex);  // get all goals for userid
-// router.get('/index/:id', goalListIndex);  // get all goals for userid
+router.get('/index/:id', goalListIndex);  // get all goals for userid
 
 //-------------------------------------------
 // Export the Router
