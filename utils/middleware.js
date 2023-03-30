@@ -16,7 +16,7 @@ const AuthRouter = require("../routers/user")
 const GoalRouter = require("../routers/goal")
 const GoalListRouter = require("../routers/goallist")
 const GoalStepRouter = require("../routers/goalstep")
-// const GoalTrackingRouter = require("../routers/goaltracking")
+const GoalTrackingRouter = require("../routers/goaltracking")
 //****************************************
 //   middleware
 //****************************************
@@ -35,7 +35,7 @@ const middleware =(app) => {
     app.use("/goal", GoalRouter);
     app.use("/goallist", GoalListRouter);
     app.use("/goalstep", GoalStepRouter);
-    // app.use("/goaltracking", GoalTrackingRouter);
+    app.use("/goaltracking", GoalTrackingRouter);
 }
 
 //****************************************
