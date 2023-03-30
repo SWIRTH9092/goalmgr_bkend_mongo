@@ -2,7 +2,6 @@
 //  Import dependencies
 //----------------------------
 const express = require("express")
-const bcrypt = require("bcryptjs")
 
 // for MongoDB database
 const GoalList = require("../../models/goallist")
