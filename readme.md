@@ -78,6 +78,7 @@
 - user
     - user delete
     - user update information
+    - user authication using cookies
 
 - goal tracking
     - track progress for a step
