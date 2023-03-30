@@ -8,7 +8,6 @@ const GoalList = require("../../models/goallist")
 
 const goalListCreate = async (req, res) => {
     try {
-        console.log("req.body", req.body)
         res.json (await GoalList.create(req.body));
 
     } catch (error) {
