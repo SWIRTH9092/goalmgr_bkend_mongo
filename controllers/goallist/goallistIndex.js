@@ -1,20 +1,18 @@
 //----------------------------
 //  Import dependencies
 //----------------------------
-const express = require("express")
-const bcrypt = require("bcryptjs")
 
 // for MongoDB database
 const GoalList = require("../../models/goallist")
 
-const goalListCreate = async (req, res) => {
+const goalListIndex = async (req, res) => {
     try {
-        console.log("req.body", req.body)
-        res.json (await GoalList.create(req.body));
-
+        // console.log("parm id:", req.parms.id)
+        res.json(await GoalList.find());
+        // res.json(await GoalList.find({ "gl_URootKey": req.params.id}));
     } catch (error) {
         //send error
-        res.status(400).json(error)
+        res.status(400).json(error);
     }
 };
 
@@ -22,4 +20,4 @@ const goalListCreate = async (req, res) => {
 //  Export controller function
 //----------------------------
 
-module.exports = goalListCreate;
+module.exports = goalListIndex

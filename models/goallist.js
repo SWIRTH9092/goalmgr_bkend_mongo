@@ -16,7 +16,6 @@ const { Schema, model } = mongoose;
 
 const goalListSchema = new Schema ({
     gl_URootKey: {type: String, required: true},
-    gl_RootKey: {type: String, required: true},
     gl_Name: {type: String, required: true},
     gl_Stat: {type: String, required: true},
     gl_Description: {type: String},

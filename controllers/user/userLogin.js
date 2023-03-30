@@ -14,11 +14,12 @@ const userLogin = async (req, res) => {
     try {
         const { u_Userid, u_Password } = req.body;
         //get the user
+        console.log("req body", req.body)
         const user = await User.findOne({ u_Userid })
         if (user) {
             const passwordCheck = await bcrypt.compare(u_Password, user.u_Password)
             if (passwordCheck) {
-                const u_RootKey = user.u_RootKey
+                const u_RootKey = user._id
                 res.json({u_RootKey, status: "Logged In"})
             } else {
                 res.status(400).json({error: "Password does not match"})               
