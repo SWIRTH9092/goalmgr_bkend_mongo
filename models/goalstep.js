@@ -23,8 +23,8 @@ const goalStepSchema = new Schema ({
     gs_Measurement: {type: String},
     gs_CountGoal: {type: Number, default: 0},
     gs_SortOrder: {type: Number, default: 99},
-    gs_StartDate: {type: Date},
-    gs_EndDate: {type, Date} 
+    gs_StartDate: {type: String},
+    gs_EndDate: {type: String} 
 }, 
 {timestamps: true});
 
